@@ -1,0 +1,12 @@
+class Solution:
+    def replaceElements(self, arr: List[int]) -> List[int]:
+        i = 0
+        y = len(arr) - 1
+
+        while i < (len(arr) - 1):
+            arr[i] = max(arr[i+1:len(arr)])
+            i += 1
+            print(arr)
+
+        arr[-1] = -1
+        return arr
